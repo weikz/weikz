@@ -1,0 +1,14 @@
+<h2>新增文章</h2>
+<%= simple_form_for [:admin, @post] do |f| %>
+  <div class="group">
+    <%= f.input :title , label: "標題", placeholder: "標題" %>
+  </div>
+
+  <div class="group">
+    <%= f.text_area :content, label: "內容", class: "form-control", rows: 25 %>
+  </div>
+
+  <div class="group">
+    <%= f.button :submit %>
+  </div>
+<% end %>

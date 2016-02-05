@@ -1,0 +1,40 @@
+<header class="inner page-header" id="header">
+  <div class="logo">
+    <h1><%= link_to("Weikz", root_path)%></h1>
+  </div>
+
+  <div class="menubar">
+    <nav class="header-menu" id="header-menu">
+      <a class="toggle-menu">Menu</a>
+
+      <ul>
+        <li class="about-me">
+          <%= link_to("About", page_path('about')) %>
+        </li>
+
+        <li class="archives">
+          <%= link_to("Archives", archive_path) %>
+        </li>
+      </ul>
+    </nav>
+
+    <form action="{{ blog.search_posts_url }}" class="search" method=
+    "get">
+      <input required class="search-field" name=
+      "q" placeholder="Search blog..." x-webkit-speech><a class="button"></a>
+    </form>
+
+    <nav class="follow-me">
+      <a class="icon-github" href="{{ blog.author_github_profile_link }}" title="GitHub"></a>
+
+      <a class="icon-facebook" href="{{ blog.author_facebook_profile_link }}" title="Facebook"></a>
+
+      <a class="icon-google-plus" href="{{ blog.author_google_plus_link }}" title="Google+"></a>
+
+      <a class="icon-twitter" href="{{ blog.author_twitter_link }}" title="Twitter"></a>
+
+      <a class="icon-rss" href="{{ blog.rss_url }}" title=
+      "RSS"></a>
+    </nav>
+  </div>
+</header>

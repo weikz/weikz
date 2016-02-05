@@ -1,0 +1,11 @@
+<footer class="inner page-footer" id="footer">
+  © 2016&nbsp;Weikz.
+  <div class="credit">
+    Theme "Slash" by <a href="https://github.com/tommy351/Octopress-Theme-Slash">tommy351</a>, customized by <a href="http://weikz.net">Weikz<a>.
+    <% if !current_user %>
+    <%= link_to("[admin]", new_user_session_path) %>
+    <% else %>
+    <%= link_to("[log out]", destroy_user_session_path, method: :delete) %>
+    <% end %>
+  </div>
+</footer>

@@ -1,0 +1,19 @@
+<div class="blog-index">
+  <!-- main post list -->
+  <% @posts.each do |post| %>
+    <article>
+      <header class="entry-header">
+        <h2 class="title">
+          <%= link_to(post.title, post_path(post)) %>
+        </h2>
+      </header>
+      <div class="entry-content">
+        <%= markdown(post.content) %>
+        <div class="more-link">
+            <%= link_to("(繼續閱讀...)", post_path(post))%>
+          </div>
+      </div>
+    </article>
+  <% end %>
+  <!-- end main post list -->
+</div>
