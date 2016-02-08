@@ -16,7 +16,7 @@ require 'capistrano/deploy'
 #   https://github.com/capistrano/rails
 require 'capistrano/rbenv'
 set :rbenv_type, :user
-set :reenv_ruby, '2.3.0-p0'
+set :rbenv_ruby, '2.3.0-p0'
 require 'capistrano/rails'
 require 'capistrano/bundler'
 require 'capistrano/passenger'
