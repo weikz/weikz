@@ -15,10 +15,6 @@ gem 'high_voltage', '~> 2.4.0'
 gem 'redcarpet'
 gem 'coderay'
 gem 'bootstrap-sass'
-gem 'capistrano', '~> 3.4.0'
-gem 'capistrano-bundler', '~> 1.1.2'
-gem 'capistrano-rails', '~> 1.1.1'
-gem 'capistrano-rbenv', github: "capistrano/rbenv"
 gem 'capistrano-passenger'
 
 
@@ -29,5 +25,12 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'capistrano', '~> 3.4.0'
+  gem 'capistrano-bundler', '~> 1.1.2'
+  gem 'capistrano-rbenv', github: "capistrano/rbenv"
+end
+
+group :production do
+  gem 'pg'
 end
 
