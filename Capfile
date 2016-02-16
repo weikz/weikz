@@ -20,7 +20,6 @@ set :rbenv_type, :user
 set :rbenv_ruby, '2.2.3'
 
 require 'capistrano/bundler'
-require 'capistrano/rails'
 require 'capistrano/passenger'
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
