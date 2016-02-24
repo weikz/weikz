@@ -28,8 +28,9 @@ class Admin::PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
+    @tag = @post.all_tags
 
-    if @post.update_columns(post_params)
+    if @post.update_attributes(post_params)
       redirect_to admin_posts_path
     else
       render :back
@@ -39,6 +40,6 @@ class Admin::PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:title, :content, :all_tags)
   end
 end

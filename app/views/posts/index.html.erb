@@ -9,11 +9,16 @@
       </header>
       <div class="entry-content">
         <%= markdown(post.content) %>
-        <div class="more-link">
-            <%= link_to("(繼續閱讀...)", post_path(post))%>
-          </div>
       </div>
     </article>
+    <footer class="entry-footer">
+      <% if !post.all_tags.blank? %>
+        <div class="tags"><%=raw post.all_tags %></div>
+      <% end %>
+      <div class="more-link">
+        <%= link_to("(繼續閱讀...)", post_path(post))%>
+      </div>
+    </footer>
   <% end %>
   <!-- end main post list -->
 </div>

@@ -14,8 +14,9 @@
     <span class="byline author vcard">Posted by <span class="fn">Weikz</span></span>
     <time datetime="{{ post.published_at.utc }}" pubdate data-updated="true"><%= @post.created_at.strftime("%Y-%m-%d")
 %></time>
-    <i class="fa fa-archive"></i>
-    <div class="tags"></div>
+    <% if !@post.all_tags.blank? %>
+      <div class="tags"><%=raw @post.all_tags %></div>
+    <% end %>
   </footer>
 </article>
 <!-- end main post list -->
